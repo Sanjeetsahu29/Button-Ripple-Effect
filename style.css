@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1592296429945-93008c7e5a59?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.btn{
+    text-decoration: none;
+    background-color:rgba(225, 159, 222, 0.125);
+    padding: 40px 80px;
+    color: black;
+    border-radius: 10px;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.323);
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    font-size: 2rem;
+    color: white;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    background-image: linear-gradient(to left,orangered,slateblue);
+    width: 0;
+    height: 0;
+    transform: translate(-50%, -50%);
+    top: var(--yPos);
+    left: var(--xPos);
+    border-radius: 50%;
+    transition: width 0.5s, height 0.5s;
+    
+}
+
+.btn:hover::before{
+    width: 850px;
+    height: 850px;
+}
+
+.btn span{
+    position: relative;
+    z-index: 1;
+}
